@@ -72,50 +72,50 @@
     }
   },
   {
-    "locale": "vi",
-    "localeName": "Tiếng Việt",
-    "pageTitle": "Tải về sách giáo khoa Trường Tiên Phong 2023",
+   "locale": "es",
+    "localeName": "Español",
+    "pageTitle": "Descarga de libros de texto PSS 2023",
     "welcome": {
-      "message": "Đây là nơi để các học viên Trường Tiên Phong tải về sách giáo khoa.\n\nNăm nay, anh chị sẽ học Trường Tiên Phong phải không?",
-      "welcomeButtonYes": "Phải, năm nay tôi sẽ học",
-      "welcomeButtonNo": "Không phải, tôi chỉ vào đây xem thử"
+      "message": "Aquí es donde los estudiantes de PSS pueden descargar sus libros de texto.\n\n¿Eres estudiante de PSS para ENG-01 este año?",
+      "welcomeButtonYes": "Sí, lo soy",
+      "welcomeButtonNo": "No, solo estoy verificando"
     },
     "notWelcome": {
-      "message": "Cảm ơn anh chị đã ghé qua.\nKhi nào đến lượt học thì xin mời anh chị lại vào đây nhé. 🙂",
-      "notWelcomeButtonOK": "Chắc chắn là thế, tôi rất mong chờ"
+      "message": "Gracias por pasar por aquí.\nNos vemos la próxima vez cuando sea tu turno. 🙂",
+      "notWelcomeButtonOK": "Claro, espero con ansias"
     },
     "authFailed": {
-      "msgError": "🤔 Có vẻ như anh chị đã nhập sai.",
-      "msgRepeat": "Xin anh chị nhập chính xác tên đầy đủ và mã <strong>như được ghi trong thư mời học.</strong>",
+      "msgError": "🤔 Parece que hubo un error en lo que enviaste.",
+      "msgRepeat": "Tu nombre y código deben ingresarse <strong>tal como aparecen en tu carta de invitación.</strong>",
       "table": {
-        "authFailedNameLabel": "Tên đầy đủ",
-        "authFailedCodeLabel": "Mã"
+        "authFailedNameLabel": "Nombre",
+        "authFailedCodeLabel": "Código"
       },
-      "authFailedButtonOK": "Ồ, để tôi sửa lại"
+      "authFailedButtonOK": "Oops, déjame cambiar eso"
     },
     "authOK": {
-      "message": "Xin chào ${name}!<br>Xin mời anh chị chọn sách giáo khoa theo <strong>ngôn ngữ</strong> và <strong>định dạng</strong> mà anh chị muốn tải về.",
-      "placeholderLanguage": "— Chọn ngôn ngữ —",
-      "placeholderFormat": "— Chọn định dạng —",
-      "downloadText": "Tải về"
+      "message": "¡Hola ${name}!<br>Por favor, selecciona los <strong>idiomas</strong> y <strong>formatos</strong> de los libros de texto que te gustaría descargar.",
+      "placeholderLanguage": "— Seleccionar idioma —",
+      "placeholderFormat": "— Seleccionar tipo de archivo —",
+      "downloadText": "Descargar"
     },
     "questions": {
       "1": {
-        "innerText": "Tên đầy đủ của anh chị là gì?",
-        "placeholder": "Tên đầy đủ như được ghi trong giấy mời…",
+        "innerText": "¿Cuál es tu nombre?",
+        "placeholder": "Tu nombre en la invitación …",
         "type": "text",
         "name": "name"
       },
       "2": {
-        "innerText": "Xin điền vào đây mã riêng của anh chị.",
-        "placeholder": "Mã này cũng được ghi trong giấy mời…",
+        "innerText": "Ingresa tu código de acceso único.",
+        "placeholder": "El código también está en la invitación …",
         "type": "text",
         "name": "code"
       }
     },
     "buttons": {
       "back": {
-        "innerText": "Quay lại",
+        "innerText": "Atrás",
         "type": "button",
         "id": "buttonBack",
         "style": {
@@ -124,7 +124,7 @@
         }
       },
       "next": {
-        "innerText": "Tiếp tục",
+        "innerText": "Siguiente",
         "type": "button",
         "id": "buttonNext",
         "style": {
@@ -133,12 +133,16 @@
         }
       },
       "submit": {
-        "innerText": "Gửi",
+        "innerText": "Enviar",
         "type": "submit",
         "id": "buttonSubmit",
         "style": {
           "visibility": "none",
           "display": "none"
+        }
+      }
+    }
+  }
         }
       }
     }

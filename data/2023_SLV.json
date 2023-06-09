@@ -1,5 +1,5 @@
 [
-   {
+  {
    "locale": "es",
     "localeName": "Español",
     "pageTitle": "Descarga de libros de texto PSS 2023",
@@ -67,7 +67,10 @@
         "style": {
           "visibility": "none",
           "display": "none"
-        },
+        }
+      }
+    }
+  },
     {
     "locale": "en",
     "localeName": "English",

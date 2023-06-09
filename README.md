@@ -1,4 +1,4 @@
 # PSS Website v2
-Serverless PSS Website
+Sitio web de la ESP sin servidor
 
-Find it on https://pss.majlovesreg.one/
+Find it on https://esp2023.sansonvaldez.org

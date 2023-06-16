@@ -1,3 +1,7 @@
+var dates = {};
+dates.startDate = Date.parse('2023-07-11T00:00:00.000+07:00');
+dates.endDate = Date.parse('2023-09-16T16:00:00.000+07:00');
+
 var LOCALE = 'en';
 var DATASOURCE = [];
 
@@ -24,14 +28,27 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 
 function main() {
-  
+
   loadTranslations();
+  
   createForm();
   updateText();
 
-  moveIn(document.getElementsByClassName('container')[0], 'flex');
-
   loadInitialListeners();
+
+  if ( Date.now() < dates.startDate ) {
+
+    moveIn(document.getElementById('beforeStartDate'));
+
+  } else if ( Date.now() > dates.endDate ) {
+
+    window.location.replace('https://www.jw.org/');
+
+  } else {
+
+    moveIn( document.getElementById('welcome') );
+
+  };
 
 };
 
@@ -57,7 +74,7 @@ function loadTranslations() {
 
   };
 
-  let locale = readCookies('locale');
+  let locale = storageAvailable('localStorage') ? localStorage.getItem('locale') : readCookies('locale');
 
   if (locale) {
 
@@ -91,7 +108,9 @@ function loadTranslations() {
 
   };
 
-  setCookie('locale', LOCALE, 400 * 24 * 3600, location.pathname, location.hostname, true);
+  storageAvailable('localStorage') ?
+    localStorage.setItem('locale', LOCALE) :
+    setCookie('locale', LOCALE, 400 * 24 * 3600, window.location.pathname, window.location.hostname, true);
 
   // Set language selected based on locale
   document.querySelector(`div#languageHeader button[value="${LOCALE}"]`).classList.add('languageSelected');
@@ -116,7 +135,7 @@ function createForm(locale) {
     div.id = 'question-' + n;
     div.classList.add("question");
     
-    div.innerHTML = '<p>'+ data.questions[n].innerText +'</p><input type="'+ data.questions[n].type +'" name="'+ data.questions[n].name +'" placeholder="'+ data.questions[n].placeholder +'">'
+    div.innerHTML = `<p>${data.questions[n].innerText}</p><input type="${data.questions[n].type}" name="${data.questions[n].name}" placeholder="${data.questions[n].placeholder}">`
 
     form.appendChild(div);
   
@@ -150,7 +169,9 @@ function updateText(locale) {
   var data = DATASOURCE.filter(jsonObj => jsonObj.locale == LOCALE)[0];
   if (!data) data = DATASOURCE.filter(jsonObj => jsonObj.locale == 'en')[0];
 
-  setCookie('locale', LOCALE, 400 * 24 * 3600, location.pathname, location.hostname, true);
+  storageAvailable('localStorage') ?
+    localStorage.setItem('locale', LOCALE) :
+    setCookie('locale', LOCALE, 400 * 24 * 3600, window.location.pathname, window.location.hostname, true);
 
   let languageButtons = document.getElementById('languageHeader').children;
   let languageButtonID = 'languageButton' + LOCALE.toUpperCase();
@@ -166,6 +187,10 @@ function updateText(locale) {
   // Set page titles
   document.title = data.pageTitle;
   document.getElementById('pageTitle').innerHTML = data.pageTitle;
+
+  // Set beforeStartDateMessage message and button texts
+  document.getElementById('beforeStartDateMessage').innerHTML = data.dateCheck.beforeStartDateMessage;
+  document.getElementById('beforeStartDateButton').innerHTML = data.dateCheck.beforeStartDateButton;
 
   // Set welcome message and button texts
   document.getElementById('welcomeMessage').innerHTML = data.welcome.message;
@@ -215,6 +240,9 @@ function updateText(locale) {
 
 function loadInitialListeners() {
 
+  document.getElementById('beforeStartDateButton')
+    .addEventListener( 'click', () => window.location.assign('https://www.jw.org/') );
+
   document.getElementById('welcomeButtonYes').focus();  
 
   document.getElementById('welcomeButtonYes')
@@ -250,11 +278,13 @@ function loadInitialListeners() {
     document.getElementById('languageButton' + locales[i].toUpperCase() )
       .addEventListener( 'click', () => {
   
+        divMain.classList.remove('fadeIn');
         divMain.classList.add('fadeOut');
   
         divMain.addEventListener('animationend', () => {
           updateText(locales[i]);
           divMain.classList.remove('fadeOut');
+          divMain.classList.add('fadeIn');
         }, {once: true} );
   
       });
@@ -537,7 +567,7 @@ function verifyData(json) {
 
     default:
 
-      alert('Oops, there was an error! Can you please report the code below to Maj? 😅\n\n' + JSON.stringify(json, null, 2));
+      alert('Oops, there was an error! Can you please report the code below? 😅\n\n' + JSON.stringify(json, null, 2));
       window.location.reload();
 
   };
@@ -846,5 +876,42 @@ secure: Whether the cookie should only be sent over secure connections. If this 
   }
 
   document.cookie = cookie;
+
+};
+
+// https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API#feature-detecting_localstorage
+function storageAvailable(type) {
+
+  let storage;
+
+  try {
+
+    storage = window[type];
+    const x = "__storage_test__";
+    storage.setItem(x, x);
+    storage.removeItem(x);
+    return true;
+
+  } catch (e) {
+
+    return (
+
+      e instanceof DOMException &&
+      // everything except Firefox
+      (e.code === 22 ||
+        // Firefox
+        e.code === 1014 ||
+        // test name field too, because code might not be present
+        // everything except Firefox
+        e.name === "QuotaExceededError" ||
+        // Firefox
+        e.name === "NS_ERROR_DOM_QUOTA_REACHED") &&
+      // acknowledge QuotaExceededError only if there's something already stored
+      storage &&
+      storage.length !== 0
+
+    );
+
+  };
 
 };

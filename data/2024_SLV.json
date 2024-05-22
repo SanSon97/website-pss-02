@@ -4,7 +4,7 @@
     "localeName": "Español",
     "pageTitle": "Descarga el libro de texto de la ESP 2023",
     "welcome": {
-      "message": "Aquí es donde los estudiantes de la ESP pueden descargar su libro de texto.\n\n¿Eres estudiante de la ESP para MA-10 este año?",
+      "message": "Aquí es donde los estudiantes de la ESP pueden descargar su libro de texto.\n\n¿Eres estudiante de la ESP para OK-7 este año?",
       "welcomeButtonYes": "Sí, lo soy",
       "welcomeButtonNo": "No, solo estoy verificando"
     },
@@ -76,7 +76,7 @@
     "localeName": "English",
     "pageTitle": "2023 PSS Textbook Download",
     "welcome": {
-      "message": "This is where PSS students can download their textbooks.\n\nAre you a PSS student for ENG-01 this year?",
+      "message": "This is where PSS students can download their textbooks.\n\nAre you a PSS student for OK-7 this year?",
       "welcomeButtonYes": "Yes, I am",
       "welcomeButtonNo": "Nope, just checking"
     },

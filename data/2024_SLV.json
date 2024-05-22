@@ -2,9 +2,9 @@
   {
    "locale": "es",
     "localeName": "Español",
-    "pageTitle": "Descarga el libro de texto de la ESP 2024",
+    "pageTitle": "Escuela del Servicio de Precursor OK-7 2024",
     "welcome": {
-      "message": "Aquí es donde los estudiantes de la ESP pueden descargar su libro de texto.\n\n¿Eres estudiante de la ESP para OK-7 este año?",
+      "message": "Aquí es donde los estudiantes pueden descargar su libro de texto.\n\n¿Fuiste invitado a la Escuela del Servicio de Precursor de OK-7 este año?",
       "welcomeButtonYes": "Sí, lo soy",
       "welcomeButtonNo": "No, solo estoy verificando"
     },
@@ -36,7 +36,7 @@
       },
       "2": {
         "innerText": "Ingresa tu código de acceso único.",
-        "placeholder": "El código también está en la invitación …",
+        "placeholder": "El código está en la carta que se te proveyó …",
         "type": "text",
         "name": "code"
       }
@@ -74,7 +74,7 @@
     {
     "locale": "en",
     "localeName": "English",
-    "pageTitle": "2024 PSS Textbook Download",
+    "pageTitle": "2024 Pioneer Service School OK-7",
     "welcome": {
       "message": "This is where PSS students can download their textbooks.\n\nAre you a PSS student for OK-7 this year?",
       "welcomeButtonYes": "Yes, I am",

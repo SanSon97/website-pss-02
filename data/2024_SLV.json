@@ -2,9 +2,9 @@
   {
    "locale": "es",
     "localeName": "Español",
-    "pageTitle": "Escuela del Servicio de Precursor OK-7 2024",
+    "pageTitle": "Escuela del Servicio de Precursor 2024",
     "welcome": {
-      "message": "Aquí es donde los estudiantes pueden descargar su libro de texto.\n\n¿Fuiste invitado a la Escuela del Servicio de Precursor de OK-7 este año?",
+      "message": "Aquí es donde los estudiantes pueden descargar su libro de texto.\n\n¿Fuiste invitado a la Escuela del Servicio de Precursor este año?",
       "welcomeButtonYes": "Sí, lo soy",
       "welcomeButtonNo": "No, solo estoy verificando"
     },
@@ -76,7 +76,7 @@
     "localeName": "English",
     "pageTitle": "2024 Pioneer Service School OK-7",
     "welcome": {
-      "message": "This is where PSS students can download their textbooks.\n\nAre you a PSS student for OK-7 this year?",
+      "message": "This is where PSS students can download their textbooks.\n\nAre you a PSS student this year?",
       "welcomeButtonYes": "Yes, I am",
       "welcomeButtonNo": "Nope, just checking"
     },

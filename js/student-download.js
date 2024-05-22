@@ -4,7 +4,7 @@ var DATASOURCE = [];
 window.addEventListener('DOMContentLoaded', () => {
 
   fetch( 
-    'data/2023_SLV.json?v=1.0.0-beta1.0.5', {
+    'data/2024_SLV.json?v=1.0.0-beta1.0.5', {
       method: "GET",
       mode: "no-cors", // ON PRODUCTION: no-cors. ON DEV: cors.
       // cache: "no-cache",
@@ -537,7 +537,7 @@ function verifyData(json) {
 
     default:
 
-      alert('Oops, there was an error! Can you please report the code below to Maj? 😅\n\n' + JSON.stringify(json, null, 2));
+      alert('Oops, ¡Hubo un error! ¿Puedes por favor reportar el código de abajo a Santiago? 😅\n\n' + JSON.stringify(json, null, 2));
       window.location.reload();
 
   };

@@ -2,7 +2,7 @@
   {
    "locale": "es",
     "localeName": "Español",
-    "pageTitle": "Descarga el libro de texto de la ESP 2023",
+    "pageTitle": "Descarga el libro de texto de la ESP 2024",
     "welcome": {
       "message": "Aquí es donde los estudiantes de la ESP pueden descargar su libro de texto.\n\n¿Eres estudiante de la ESP para OK-7 este año?",
       "welcomeButtonYes": "Sí, lo soy",
@@ -74,7 +74,7 @@
     {
     "locale": "en",
     "localeName": "English",
-    "pageTitle": "2023 PSS Textbook Download",
+    "pageTitle": "2024 PSS Textbook Download",
     "welcome": {
       "message": "This is where PSS students can download their textbooks.\n\nAre you a PSS student for OK-7 this year?",
       "welcomeButtonYes": "Yes, I am",
